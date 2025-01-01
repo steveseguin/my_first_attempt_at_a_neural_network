@@ -18,6 +18,11 @@ The code implements several interesting characteristics:
 - Weight clipping mechanism (0 to 1)
 - "Best response" tracking system (similar to simulated annealing)
 
+### OpenCL Experiments
+The repository also includes `opencl.py`, representing attempts to accelerate neural network computations using OpenCL. While I successfully implemented basic OpenCL operations, creating a fully functional neural network proved challenging. I even reached out to Khronos Group developers (OpenCL maintainers), but the communication gap between machine learning goals and low-level GPU computing proved difficult to bridge.
+
+These OpenCL experiments were eventually made redundant by TensorFlow's CUDA support. While OpenCL showed promise, CUDA's dominance in the ML space and better developer support made it the clear winner for neural network acceleration.
+
 ## Modern AI Perspective
 
 Looking back at this code from a modern perspective reveals some fascinating insights. The implementation, while naive, shows interesting intuitions about neural network optimization that parallel more sophisticated approaches:
@@ -42,6 +47,7 @@ I didn't achieve any meaningful results until discovering TensorFlow years later
 
 ## Repository Contents
 - Original Python implementation using NumPy
+- OpenCL acceleration attempts
 - Requires OpenCV and PIL for image processing
 - Designed to work with 28x28 pixel images
 
